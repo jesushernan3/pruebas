@@ -1,5 +1,5 @@
 <?php
-  include '../setup.php';
+  $raiz = '/';
   include '../includes/head.php';
 ?>
 

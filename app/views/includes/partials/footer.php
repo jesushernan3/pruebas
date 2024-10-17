@@ -16,7 +16,8 @@
     </section>
     <!-- <div class="logo-footer title">Desarrollo para todos</div> -->
   </div>
-  <div class="footer-bottom d-flex-centered f-direction-column clearfix container">
-    <p>copyrigth 2020 - crmode</p>
-  </div>
+  <div class="footer-bottom d-flex-centered f-direction-column clearfix container"><p>
+    copyrigth 2020 - crmode
+  </p>
+</div>
 </footer>
