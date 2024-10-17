@@ -1,0 +1,509 @@
+/*================================
+ Estilos Generales
+==================================*/
+@font-face {
+  font-family: Fredoka;
+  src: url(/public/fonts/FredokaOne-Regular.ttf);
+}
+@font-face {
+  font-family: Assistant;
+  src: url(/public/fonts/Assistant/Assistant-Light.ttf);
+}
+
+body {
+  padding: 20px;
+  font-size: 1.1em;
+  color: #707070;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+#envoltorio {
+  background-color: #f5f5f5;
+}
+.container {
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto ;
+}
+a {
+  color: #414141;
+  -moz-transition: all 275ms;
+  -o-transition: all 275ms;
+  -webkit-transition: all 275ms;
+  transition: all 275ms;
+  }
+a:hover {
+  color: #c054c0;
+}
+
+.columns:not(.is-desktop) {
+  flex-wrap: wrap;
+}
+.d-flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f-direction-column {
+  flex-direction: column;
+  justify-content: unset;
+}
+
+main > section {
+	padding-top: 50px;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.content ul, .content ul li ul li {
+  list-style: none;
+}
+.content ul > li::before {
+  content: "—";
+  color: #c054c0;
+  font-weight: bold;
+  display: inline-block;
+  width: 1.4em;
+  margin-left: -0.5em;
+  font-size: 1.4rem;
+}
+.content ul > li > ul > li::before {
+  content: "\2022";
+  width: 0.8rem;
+  margin-left: 0;
+}
+/* Header
+ ==================================*/
+header {
+  padding: 20px 0;
+}
+ /* ···························Main Nav */
+ .contenedor-nav {
+  width: 100%;
+  display: flex;
+  position: sticky;
+  top: 0;
+ }
+ .main-nav {
+	display: flex;
+	justify-content: center;
+  background-color: #d13a3a;
+}
+ /* botones de navegacion */
+ .boton-nav {
+	display: inline-block;
+	padding: 30px;
+	margin: 0 5px;
+}
+a.boton-nav:hover {
+  background-color: aquamarine;
+}
+header img {
+  display: block;
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+}
+ /* .main-nav ul {
+   display: flex;
+   justify-content: space-between;
+   max-width: 600px;
+   margin-top: 25px;
+   margin-left: auto;
+   margin-right: auto;
+   align-items: center;
+ }
+.main-nav ul li {
+  display: inline-block;
+  width: 150px;
+}
+.main-nav ul li a {
+  font-family: Assistant;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #414141;
+  display: block;
+}
+.main-nav ul li a:hover {
+  border-bottom: 1px solid #c054c0;
+}
+
+.main-nav .logo a, .main-nav .logo a:hover {
+	border-bottom: none;
+}
+.logo-mobile {
+  display: none;
+} */
+
+/*=======================================
+ Main (reglas comunes a todas las vistas)
+=========================================*/
+.manifiesto {
+  text-align: center;
+}
+.manifiesto h1, .manifiesto h2 {
+  font-size: 5rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #333;
+}
+.manifiesto h2 {
+  font-size: 3rem;
+  margin-top: unset;
+}
+.content h2:not(:first-child) {
+  margin-top: unset;
+  color: #c054c0;
+}
+.manifiesto p {
+ font-size: 1.3rem;
+ margin: 30px 100px;
+}
+.module-title, .module-subtitle {
+	position: relative;
+	letter-spacing: 4px;
+	text-align: center;
+	font-weight: 400;
+	margin: 0 0 70px;
+}
+.module-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 10px;
+}
+.module {
+	position: relative;
+	padding: 80px 0;
+}
+.caja-parrafo {
+	font-size: 1.3rem;
+	font-weight: lighter;
+	color: #707070;
+  margin: 70px auto;
+  max-width: 810px;
+  text-align: center;
+}
+
+/* Home View
+ =====================*/
+ 
+/*··························· Home -> Servicios  */
+#servicios {
+  min-height: 500px;
+}
+#servicios .servicio span, #servicios .servicio h4 {
+padding-top: 20px;  
+}
+#servicios .servicio h4 {
+text-transform: uppercase;
+font-weight: lighter;
+letter-spacing: 2px;
+text-align: center;
+}
+#servicios .servicio p {
+	font-size: 0.8rem;
+	color: #6f6f6f;
+  padding: 25px 10px;
+  text-align: center;
+}
+.servicio span {
+	font-size: 2rem;
+}
+.is-half .frame.caja-parrafo h2,
+.is-half .frame.caja-parrafo a {
+  margin: 20px 0;
+  padding: 10px;
+}
+.is-half .frame.caja-parrafo .button {
+  white-space: normal;
+  margin: 10px;
+  box-sizing: content-box;
+}
+.is-half .frame.caja-parrafo h2 {
+  text-transform: uppercase;
+}
+.is-half .frame.caja-parrafo h2,
+.is-half .frame.caja-parrafo a {
+  font-size: 1rem;
+}
+.is-half .frame.caja-parrafo {
+	padding: 50px 0;
+}
+
+/* Categoria - Vista (Sitios Web y Servicios)
+=============================================*/
+.product h4 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+}
+.product h2 {
+  font-size: 3rem;
+  position: relative;
+}
+.product h4::after {
+	border-bottom: 1px solid #afafaf;
+	content: "";
+	display: block;
+	width: 30px;
+	margin: 6px auto;
+}
+.product h4 span {
+  color: #c054c0;
+}
+
+.product li {
+	border-top: 1px solid #AFAFAF;
+	padding: 10px 0;
+	text-align: center;
+	font-size: .9rem;
+}
+.product li:last-child {
+	border-bottom: 1px solid #AFAFAF;
+}
+.frame > ul {
+	margin-top: 10px;
+}
+.frame {
+  border: 1px solid #AFAFAF;
+  padding: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.frame:hover {
+  border: 1px solid #333
+}
+.column .frame > span {
+  font-size: 2rem;
+}
+.a-partir::before {
+  content: "a partir de";
+  font-size: 0.8rem;
+  position: absolute;
+  right: 5px;
+}
+.por-hora::after {
+  content: "por hora";
+  font-size: 0.2em;
+  position: absolute;
+  font-size: 0.3em;
+  display: block;
+  right: 0;
+  bottom: 0;
+}
+/* Producto - Vista
+==================================*/
+.articulo-info h3, .articulo-info li {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.articulo-info ul li ul li {
+  font-size: 0.9rem;
+}
+.text-explain {
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+.content ul ul, .content li + li {
+  margin-top: 0;
+}
+/* footer
+ ==================================*/
+footer {
+padding: 75px 0 30px;
+border-top: 1px dotted #aaa;
+}
+.footer-bottom {
+  padding: 30px 0;
+}
+.footer-top, .footer-bottom {
+  position: relative;
+}
+.contact-widget, .text-widget, .contact-widget h4, .text-widget h4 {
+  margin-bottom: 70px;
+}
+.contact-widget h4, .text-widget h4, .contact-widget ul li, .footer-bottom p {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+.contact-widget ul li {
+  font-family: 'Roboto Condensed', serif;
+  font-size: 0.8rem;
+  line-height: 25px;
+}
+.text-widget p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+.contact-widget ul li span {
+  margin-left: -27px;
+  padding-right: 14px;
+  color: #c054c0;
+}
+.contact-widget ul li span.icon-envelope {
+  padding-right: 7px;
+}
+.contact-widget ul {
+  margin-left: 27px;
+}
+/* Contacto
+ ==================================*/
+ .input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
+  border-color: unset;
+  border: none;
+}
+.input, .textarea, .select select {
+  border-radius: unset;
+  border-color: #919191;
+  background-color: unset;
+}
+.label {
+  font-weight: 300;
+}
+#contacto {
+  min-height: 500px;
+}
+.caja-formulario {
+  margin: 0 15px;
+}
+input, textarea, .button {
+  border: 1px solid #777;
+  padding: 12px 20px;
+  margin: 20px 0 0;
+  box-sizing: border-box;
+}
+.input:focus, footer textarea:focus, .button:hover {
+	box-shadow: 0px 1px 8px 1px #777;
+}
+.button {
+  cursor: pointer;
+}
+.field {
+  margin-bottom: 25px;
+}
+
+/*================================
+ Media Queries
+==================================*/
+@media (max-width: 1152px /* Widescreen - Breakpoint */) {
+
+}
+@media (max-width: 960px /* Desktop - Breakpoint */) {
+
+}
+@media (max-width: 769px /* Table - Breakpoint */) {
+  body {
+    padding: 10px;
+  }
+  #envoltorio {
+    padding: 0 15px;
+  }
+  /*··························· Contenido  769*/
+  .manifiesto h1, .manifiesto h2 {
+    font-size: 3rem;
+  }
+  .manifiesto p {
+    font-size: 1.2rem;
+    margin: unset;
+  }
+  .module {
+    padding: 30px 0;
+  }
+  .caja-parrafo {
+    margin: 30px auto;
+  }
+  .module-subtitle {
+    margin: 0 0 30px;
+  }
+  .content ul > li::before {
+    content: "-";
+    width: 0.7em;
+  }
+  .main-nav ul li {
+    width: 120px;
+  }
+  .a-partir::before {
+    top: -10px;
+    width: 80px;
+  }
+  .por-hora::after {
+    font-size: 0.5em;
+    top: 32px;
+  }
+  /* vista producto 769 */
+  .content ul {
+    margin-left: 0.5em;
+  }
+  .content .articulo-info .columns .column > ul > li {
+    margin-bottom: 0.7rem;
+  }
+  .manifiesto h1, .manifiesto h2, .product h2 {
+    word-wrap: anywhere;
+  }
+  .manifiesto h1, .manifiesto h2 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .product h2 {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+  }
+
+  
+  /*··························· Categories  769*/
+  .product h2 {
+    font-size: 2rem;
+  }
+  .a-partir::before {
+    right: 2px;
+    top: -7px;
+  }
+  .content h2:not(:first-child) {
+    font-size: 2rem;
+  }
+
+  /*··························· Footer 769  */
+  .contact-widget h4, .text-widget h4 {
+    margin-bottom: 30px;
+  }
+  .footer-bottom {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 474px /* Small Mobile - Breakpoint */) {
+  
+  /*··························· Nav Bar  */
+  .main-nav ul li.logo {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  /*··························· Contenido  */
+  
+  .module {
+    padding: 50px 0;
+  }
+  .manifiesto p {
+    margin: 20px 10px;
+  }
+  .col-25 {
+    width: 100%;
+  }
+  
+
+  /*··························· Footer  */
+  
+  .contact-widget ul, .text-widget p {
+    margin-left: 35px;
+  }
+}
