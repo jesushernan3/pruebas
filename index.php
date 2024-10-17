@@ -1,2 +1,2 @@
 <?php
-  require 'app/views/home.php';
+  echo "volver a empezar";
