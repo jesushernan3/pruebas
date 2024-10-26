@@ -1,5 +1,9 @@
 Options All -Indexes
 
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+# RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^sitios-web$ app/views/content/sitios-web.php [L]
+RewriteRule ^servicios$ app/views/content/servicios-admin.php [L]
+# RewriteRule ^([a-z-]{3,})$ index.php?nav=$1 [NC,L]
+# RewriteRule ^([^\.]+)$ $1.php [NC,L]
+# RewriteRule ^sitios-web$ app/views/content/sitios-web [L]

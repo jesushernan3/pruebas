@@ -1,0 +1,42 @@
+Notas
+
+<?php
+// Obtenes el PATH de la solicitud Http
+$requestUri = $_SERVER['REQUEST_URI'];
+
+// aca parseas la URL y te quedas con el PATH limpito
+$parsedUrl = parse_url($requestUri);
+$path = trim($parsedUrl['path'], '/');
+
+// Este es un array de rutas...
+// simplemente tenes una lista con la URL que vos queres que machea con el archivo que va a ejecutar el codigo para esa ruta especifica...
+$routes = [
+    'sitios-web' => 'app/views/content/sitios-web.php',
+    // aca agregas cuantas rutas quieras con su php destino correspondiente
+];
+
+// Aca haces el include del archivo.php si esta definida en la lista de `$routes`
+if (array_key_exists($path, $routes)) {
+    include $routes[$path];
+} else {
+    // Aca manejas el error si la ruta que vino en la URL no existe.. tiras un 404 por default..
+    header("HTTP/1.0 404 Not Found");
+    echo "404 Not Found";
+}
+
+:::::::::::::::::
+HTACCESS
+RewriteEngine On
+RewriteBase /
+
+# Redirecciono TODO a index.php excepto archivos y directorios
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
+
+******
+
+RewriteEngine On
+
+# RewriteRule pattern substitution [flags]
+RewriteRule ^sitios-web$ app/views/content/sitios-web [L]
